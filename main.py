@@ -10,7 +10,6 @@ from tqdm import tqdm
 import collections
 import numpy as np
 import pandas as pd
-from pulp import *
 
 from flask import *
 from werkzeug import secure_filename
@@ -40,8 +39,7 @@ app.config['DOWNLOADS_FOLDER'] = DOWNLOADS_FOLDER
 def form():
     return render_template('home.html')
 
-
-# pythonのversion確認
+# ルーティングテスト
 @app.route('/hello')
 def hello():
     return "hello, developer!!"
